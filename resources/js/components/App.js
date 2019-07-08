@@ -13,9 +13,9 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path='/' component={ProjectsList} />
-            <Route path='/create' component={NewProject} />
-            <Route path='/:id' component={SingleProject} />
+            <Route exact path='/projects' component={ProjectsList} />
+            <Route path='/projects/create' component={NewProject} />
+            <Route path='/projects/:id' component={SingleProject} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -27,14 +27,14 @@ class ProjectsList extends Component {
             <div className='card'>
               <div className='card-header'>All projects</div>
               <div className='card-body'>
-                <Link className='btn btn-primary btn-sm mb-3' to='/create'>
+                <Link className='btn btn-primary btn-sm mb-3' to='/projects/create'>
                   Create new project
                 </Link>
                 <ul className='list-group list-group-flush'>
                   {projects.map(project => (
                     <Link
                       className='list-group-item list-group-item-action d-flex justify-content-between align-items-center'
-                      to={`/${project.id}`}
+                      to={`/projects/${project.id}`}
                       key={project.id}
                     >
                       {project.name}
