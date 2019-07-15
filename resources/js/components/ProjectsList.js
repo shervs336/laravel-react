@@ -11,7 +11,9 @@ class ProjectsList extends Component {
   }
 
   componentDidMount () {
-    axios.get('/api/projects').then(response => {
+
+
+    axios.get('/api/projects', { headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` } }).then(response => {
       this.setState({
         projects: response.data
       })
